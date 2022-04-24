@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKE STATION</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Chào mừng bạn đến với trạm xe</h2>
+        <a href="/return_bike">
+            <div class="component">
+                Client
+            </div>
+        </a>
+        <a href="/">
+            <div class="component">
+                Admin
+            </div>
+        </a>
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+        width: 100vw;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .component {
+        font-size: 1.5em;
+        color: rgb(0, 0, 0);
+        background-color: rgb(233, 248, 229);
+        margin: 20px auto;
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        box-shadow: 5px 5px #999;
+        border: 0.7px solid black;
+    }
+
+    .component:active {
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+    a {
+        text-decoration: none;
+    }
+</style>
+<script>
+    const handleClick = () => {
+        alert("dit me may")
+    }
+</script>
+
+</html>

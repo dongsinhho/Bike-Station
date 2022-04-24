@@ -1,0 +1,34 @@
+{
+  "slot": [
+    {
+      "slotNumber": 1,
+      "bikeId": null,
+      "isOpen": true
+    },
+    {
+      "slotNumber": 2,
+      "bikeId": null,
+      "isOpen": true
+    },
+    {
+      "slotNumber": 3,
+      "bikeId": null,
+      "isOpen": true
+    },
+    {
+      "slotNumber": 4,
+      "bikeId": null,
+      "isOpen": true
+    },
+    {
+      "slotNumber": 5,
+      "bikeId": null,
+      "isOpen": true
+    },
+    {
+      "slotNumber": 6,
+      "bikeId": null,
+      "isOpen": true
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKE STATION</title>
+</head>
+
+<body>
+    <div>
+        
+        <form class="container" action="/return_bike" method="post">
+            <h2>Nhập mã xe bạn muốn trả</h2>
+            <div class='login'>
+                <input placeholder='Type bike id' name='bikeId' oninput="checkInput()" />
+                <button type='Submit' disabled>Return bike</button>
+            </div>
+        </form>
+    </div>
+</body>
+<style>
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .container {
+        font-size: 20xp;
+        width: 100vw;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    input {
+        width: 30%;
+        border: 1px solid black;
+        border-radius: 0.3em;
+        margin-right: 1em;
+        padding: 0.8em 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    button {
+        border-radius: 0.1em;
+        padding: 0.7em 1em;
+        border: 1px solid black;
+    }
+    button:active {
+        background-color: rgb(247, 245, 245);
+        box-shadow: 0 1px #666;
+        transform: translateY(2px);
+    }
+
+</style>
+<script>
+    function checkInput() {
+        const submitButton = document.querySelector("button")
+        const input = document.querySelector("input")
+        if (input.value.length > 5) {
+            submitButton.disabled = false
+        } else {
+            submitButton.disabled = true
+        }
+    }
+</script>
+</html>
