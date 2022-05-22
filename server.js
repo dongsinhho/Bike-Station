@@ -47,30 +47,6 @@ app.use(cookieParser())
 app.use(json())
 app.use(urlencoded({ extended: true }))
 
-// app.get('/getOpenSlot', async (req, res) => {
-//     // lay thong tin tu các GPIO 
-//     // kiểm tra có chân khoá nào mở  thì  + vào array, sau đó random vị trí, hoặc chọn vị trí nhỏ nhất FIFO
-//     // trả về vị trí random, nếu k có chân nào mở thì trả về 0 hoặc False
-//     //
-//     // sau đó chuyển OpenSlot này thành CloseSlot
-//     // res.send("Slot so x / false")
-//     res.status(200).json({
-//         status: true,
-//         slot: 1
-//     })
-// })
-// app.get('/getCloseSlot', async (req, res) => {
-//     // lay thong tin tu các GPIO 
-//     // kiểm tra có chân khoá nào đóng  thì  + vào array, sau đó random vị trí, hoặc chọn vị trí nhỏ nhất FIFO
-//     // trả về vị trí random, nếu k có chân nào mở thì trả về 0 hoặc False
-//     //
-//     // sau đó chuyển CloseSlot này thành OpenSlot
-//     // res.send("Slot so x / false")
-//     res.status(200).json({
-//         status: true,
-//         slot: 2
-//     })
-// })
 
 app.get('/get_all_slot', async (req, res) => {
     res.status(200).json(db.data.slot)
@@ -86,7 +62,7 @@ app.post('/create_slot', async (req, res) => {
     res.status(200).json({ message: "create success" })
 })
 
-app.get('/bike/:bikeId', async (req, res) => {
+app.get('/:bikeId', async (req, res) => {
     try {
         db.get('slot')
             .find({ bikeId: req.params.bikeId })
