@@ -62,7 +62,7 @@ app.post('/create_slot', async (req, res) => {
     res.status(200).json({ message: "create success" })
 })
 
-app.get('/:bikeId', async (req, res) => {
+app.get('/bike/:bikeId', async (req, res) => {
     try {
         db.get('slot')
             .find({ bikeId: req.params.bikeId })
