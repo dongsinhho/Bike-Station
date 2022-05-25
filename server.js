@@ -9,7 +9,7 @@ const db = new Low(new JSONFile('file.json'))
 
 const app = express()
 const PORT = 8088
-const SERVER = 'localhost:3000'
+const SERVER = '54.169.182.170:3000'
 const STATION_ID = "áđálkạds"
 var token
 setInterval(() => {
