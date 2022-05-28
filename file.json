@@ -2,13 +2,13 @@
   "slot": [
     {
       "slotNumber": 1,
-      "bikeId": null,
-      "isOpen": true
+      "bikeId": "6262be15c341555b60a60d75",
+      "isOpen": false
     },
     {
       "slotNumber": 2,
-      "bikeId": null,
-      "isOpen": true
+      "bikeId": "62637f4bf5abce83ed0c0591",
+      "isOpen": false
     },
     {
       "slotNumber": 3,
