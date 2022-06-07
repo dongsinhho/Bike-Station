@@ -20,6 +20,8 @@ const email = "stationbinhthanh@gmail.com"
 const password = "Stationbinhthanh123"
 var token = null
 
+app.use(express.static(join(__dirname + '/public')))
+
 app.use(cors({
     "origin": true,
     "credentials": true
@@ -95,6 +97,11 @@ app.get('/return_bike', async (req, res) => {
     res.render('returnBike.ejs');
 })
 
+app.get('/station_info', async (req, res) => {
+    const {slot} = db.data
+    res.render('stationInfo.ejs', {slot: slot});
+})
+
 const checkBikeInfo = async (bikeId) => {
     try {
         console.log("check bike info")
@@ -152,7 +159,6 @@ db.data ||= { slot: [] }
 db.chain = lodash.chain(db.data)
 let { slot } = db.data
 
-console.log(slot)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKE STATION</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h2>
+                Station status
+            </h2>
+        </div>
+
+        <div class="slots">
+            <% for(var i=0; i<slot.length; i++) { %>
+                
+                <% if(slot[i].isOpen){ %>
+                    <div class="slot" id="available">
+                        <img src="/image/mountain-bike.png" ></img>
+                    </div>
+                <% } else{ %>  
+                    <div class="slot" id="unavailable">
+                        <img src="/image/mountain-bike.png" ></img>
+                    </div>
+                <% } %>
+                
+            <% } %>
+        </div>
+        <div class="caption">
+            <div class="section">
+                <div class="signature" id="sign1"></div>
+                <p>Unavailable slot</p>
+            </div>
+            <div class="section">
+                <div class="signature" id="sign2"></div>
+                <p>Available slot</p>
+            </div>
+        </div>
+        <a href="/">Return home page</a>
+    </div>
+</body>
+<style>
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container {
+        font-size: 20xp;
+        width: 100vw;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .slot {
+        margin: 10px;
+        padding: 30px 10px 30px 10px;
+        
+    }
+
+    #unavailable{
+        background-color: red;
+    }
+
+    #available{
+        background-color: green;
+    }
+
+    .slots {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 5rem;
+    }
+
+    .caption{
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    .signature {
+        width: 20px;
+        height: 20px;
+
+        display: inline-block;
+
+    }
+    p {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        line-height: 20px;
+    }
+    #sign1 {
+        background-color: red;
+    }
+    #sign2 {
+        background-color: green;
+    }
+
+
+</style>
+<script>
+
+</script>
+
+</html>
